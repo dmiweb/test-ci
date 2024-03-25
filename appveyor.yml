@@ -1,0 +1,15 @@
+version: 1.0.{build}
+environment:
+  GITHUB_TOKEN: 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
+build:
+  verbosity: minimal
+image: Ubuntu1804
+stack: node 12
+branches:
+  only:
+    - master
+cache: node_modules
+install:
+  - npm install
+test_script:
+  - npm run lint && npm test  
