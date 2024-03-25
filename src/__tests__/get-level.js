@@ -1,4 +1,4 @@
-import {getLevel} from '../get-level';
+import getLevel from '../get-level';
 import fetchData from '../http';
 
 jest.mock('../http');
@@ -20,7 +20,7 @@ test('testing function getLevel', () => {
 });
 
 test('testing function getLevel', () => {
-  fetchData.mockReturnValue({'status': 'ok', 'level': 12});
+  fetchData.mockReturnValue({ status: 'ok', level: 12 });
   const result = getLevel(1);
   expect(result).toBe('Ваш текущий уровень: 12');
 });
