@@ -1,7 +1,7 @@
-import getLevel from '../get-level';
-import fetchData from '../http';
+import getLevel from '../js/getLevel';
+import fetchData from '../js/http';
 
-jest.mock('../http');
+jest.mock('../js/http');
 
 beforeEach(() => {
   jest.resetAllMocks();
@@ -13,7 +13,7 @@ test('should call getLevel once', () => {
   expect(fetchData).toBeCalledWith('https://server/user/1');
 });
 
-test('testing function getLevel', () => {
+test('testing function getLevel throw Error', () => {
   fetchData.mockReturnValue(new Error('Mock this!'));
   const result = getLevel(1);
   expect(result).toBe('Информация об уровне временно недоступна');

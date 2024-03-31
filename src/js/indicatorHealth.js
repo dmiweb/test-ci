@@ -8,5 +8,4 @@ export default function indicatorHealth(user) {
   if (user.health < 15 && user.health > 0) {
     return 'critical';
   }
-  return 'dead';
 }
