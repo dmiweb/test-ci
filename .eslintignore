@@ -2,4 +2,3 @@ dist
 coverage
 docs
 src/__tests__
-src/js/http.js
